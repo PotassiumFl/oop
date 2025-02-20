@@ -32,7 +32,7 @@ public class lab1 {
             // 成绩排序输出名字
             studentList.sort(Comparator.comparingInt(Student::getScore).reversed());
             for (int i = 0; i < count - 1; i++) {
-                System.err.println(studentList.get(i).name);
+                System.out.println(studentList.get(i).name);
             }
 
             // 关闭文件读取
