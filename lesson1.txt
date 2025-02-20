@@ -1,0 +1,6 @@
+chanc@fudan.edu.cn
+《java语言程序设计（基础篇）》
+
+《thinking in java》 机械工业出版社
+
+Chapter 1
