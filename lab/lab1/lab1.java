@@ -5,11 +5,12 @@ public class lab1 {
     public static void main(String[] args) {
         // 初始化
         int count = 0;
-        int sum = 0;
-        int average = 0;
+        double sum = 0.0;
+        double average = 0.0;
         String bufferString;
         List<Student> studentList = new ArrayList<>();
         File file = new File("grade.txt");
+
         // 异常处理
         try {
             // 文件读取
@@ -20,19 +21,17 @@ public class lab1 {
             while ((bufferString = bufferedReader.readLine()) != null) {
                 String[] clip = bufferString.split(" ");
                 studentList.add(new Student(clip[0], Integer.parseInt(clip[1])));
+                sum += Integer.parseInt(clip[1]);
                 count++;
             }
 
             // 计算平均值并输出
-            for (int i = 0; i < count - 1; i++) {
-                sum += studentList.get(i).score;
-            }
-            average = sum / (count - 1);
+            average = sum / count;
             System.out.println("平均成绩是：" + average);
 
             // 成绩排序输出名字
             studentList.sort(Comparator.comparingInt(Student::getScore).reversed());
-            for (int i = 0; i < count - 1; i++) {
+            for (int i = 0; i < count; i++) {
                 System.out.println(studentList.get(i).name);
             }
 
