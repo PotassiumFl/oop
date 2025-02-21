@@ -9,7 +9,8 @@ public class lab1 {
         int average = 0;
         String bufferString;
         List<Student> studentList = new ArrayList<>();
-        File file = new File("F:\\vscode\\oop\\lab\\lab1\\grade.txt");
+        File file = new File("grade.txt");
+        // 异常处理
         try {
             // 文件读取
             FileReader fileReader = new FileReader(file);
