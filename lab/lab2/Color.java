@@ -1,19 +1,28 @@
 public enum Color {
     black, white, empty;
 
-    public void printColor() {
+    public String toString() {
         switch (this) {
             case black:
-                System.out.print("◉");
-                break;
+                return "\u25CB";
             case white:
-                System.out.print("◯");
-                break;
+                return "\u25CF";
             case empty:
-                System.out.print("·");
-                break;
+                return "·";
             default:
-                break;
+                return " ";
         }
     }
+
+    public static Color convert(Color color) {
+        switch (color) {
+            case black:
+                return Color.white;
+            case white:
+                return Color.black;
+            default:
+                return Color.empty;
+        }
+    }
+
 }
