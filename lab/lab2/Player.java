@@ -1,4 +1,5 @@
 public class Player {
+    // 用户对象
     String name;
     Color color;
 
